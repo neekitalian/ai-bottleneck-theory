@@ -1,0 +1,125 @@
+{
+  "flow_heading": "What happens at each stage",
+  "flow_intro": "Select a stage in the loop to see its cash flows, control points, and exposure.",
+  "flow_labels": [
+    "Capital received",
+    "Capital paid out",
+    "Who can capture value",
+    "Who carries risk"
+  ],
+  "flow": [
+    {
+      "heading": "Household savings",
+      "description": "Households are the starting point for retirement capital and the endpoint for both investment outcomes and changes in earned income. These exposures do not necessarily offset each other.",
+      "items": [
+        "Contributions from earned income enter retirement arrangements.",
+        "Savings are allocated through pension institutions and investment mandates.",
+        "Beneficiaries may receive investment gains through the rules of their retirement plan.",
+        "Households face investment uncertainty and wage risk, with different timing and distribution."
+      ]
+    },
+    {
+      "heading": "Public pensions",
+      "description": "Pension institutions invest on behalf of beneficiaries. Their mandates, liquidity needs, and manager choices shape which assets retirement capital can reach.",
+      "items": [
+        "Contributions and portfolio cash flows support the investment pool.",
+        "Capital is committed to managers or invested in assets; commitments are not the same as cash deployed.",
+        "Beneficiaries have claims defined by plan rules; investment managers may earn fees.",
+        "Portfolio losses, illiquidity, and funding pressures affect institutions and their stakeholders."
+      ]
+    },
+    {
+      "heading": "VC / PE funds",
+      "description": "Fund managers connect institutional capital with private companies. Access to deals, investment terms, and ownership stakes determine how returns are shared.",
+      "items": [
+        "Limited partners commit capital under fund agreements.",
+        "Funds invest in companies and may make follow-on investments.",
+        "Managers may earn management fees and carried interest; investors receive distributions under the contract.",
+        "Investors carry company and liquidity risk; fees and financing terms affect net returns."
+      ]
+    },
+    {
+      "heading": "AI companies",
+      "description": "Funding expands capacity, but raising capital is not the same as generating revenue or profit. Customers still need to pay for reliable results.",
+      "items": [
+        "Equity or debt finances development and operations; customer revenue is a separate flow.",
+        "Companies pay for compute, staff, data, distribution, and integration.",
+        "Owners retain residual returns when revenue exceeds costs; customers may capture savings through lower prices.",
+        "Investors face business risk, customers face delivery risk, and workers face changing tasks and pay."
+      ]
+    },
+    {
+      "heading": "Compute & energy",
+      "description": "AI spending creates demand for infrastructure. Scarce capacity can strengthen a supplier’s bargaining position, but expansion costs and competing supply can erode returns.",
+      "items": [
+        "Cloud contracts, equipment purchases, and infrastructure finance support capacity.",
+        "Providers fund equipment, construction, electricity, operations, and financing.",
+        "Suppliers and asset owners may capture margins, interest, or infrastructure cash flows.",
+        "Owners face utilization, construction, financing, and obsolescence risk; energy costs can affect other users."
+      ]
+    },
+    {
+      "heading": "Jobs repriced",
+      "description": "Changes in tasks and organizations affect wages and employment. The buyout snapshot illustrates organizational change; it does not prove that AI replaced the eligible roles.",
+      "items": [
+        "Workers receive wages; eligible households may also receive investment benefits.",
+        "Households spend, save, and contribute to retirement arrangements.",
+        "Productivity gains may accrue to employers, customers, or workers depending on competition and bargaining.",
+        "Workers may face displacement or retraining costs; investment ownership does not guarantee compensation."
+      ]
+    }
+  ],
+  "region_notes": {
+    "US": "An intermediary route: pension institutions select private-market managers. Net beneficiary returns depend on underlying holdings, fees, investment terms, and benefit rules. Private VC exposure does not capture listed AI holdings.",
+    "Canada": "Ownership and lending create different claims. A data-center stake offers residual ownership returns; a loan offers contractual interest and repayment rights. Neither is equivalent to owning a model company.",
+    "UK": "The private-markets target is broader than the current unlisted-equity measure. Keep policy pledges, binding commitments, capital calls, and invested assets separate when assessing progress.",
+    "EU": "The comparison mixes a pension-and-insurance asset stock with venture commitments over a decade. It is not a current AI portfolio weight, and low domestic VC commitments do not establish an absence of global AI exposure.",
+    "Japan": "The alternatives share and allocation cap describe capacity, not promised AI spending. A direct commitment to a private-equity fund is also different from directly owning its portfolio companies.",
+    "Singapore": "Sovereign investors can hold claims across the AI stack. Sovereign assets are distinct from personal pension accounts; how returns reach households depends on institutional and fiscal arrangements."
+  },
+  "mechanism_heading": "What turns a bottleneck into returns",
+  "mechanisms": [
+    {
+      "title": "Reliable results",
+      "body": "Technical capacity creates an opportunity only when a result meets the required quality, timing, and responsibility standard. More calls do not automatically mean more useful output."
+    },
+    {
+      "title": "Paying demand",
+      "body": "Customers need budgets and a reason to pay. Lower delivery costs may increase volume, but competition can pass those savings to customers rather than company owners."
+    },
+    {
+      "title": "Control and ownership",
+      "body": "Customer relationships, scarce resources, switching costs, and contracts influence bargaining power. Ownership and financing then determine who has a claim on the cash flows."
+    }
+  ],
+  "model_note": "The model distinguishes value creation from value capture: solving a constraint can benefit customers or society without giving the solver lasting pricing power.",
+  "reading_heading": "How to read this board",
+  "glossary": [
+    {
+      "title": "Capital flow is not a complete accounting loop",
+      "body": "The arrows illustrate a mechanism, not matching transactions or a measured causal chain. Wages, public markets, taxes, and other financing routes also matter."
+    },
+    {
+      "title": "Commitment is not deployment",
+      "body": "A pledge states an intention. A binding fund commitment creates an obligation. A capital call transfers cash. Asset value measures holdings at a point in time. Realized distributions return cash to investors."
+    },
+    {
+      "title": "Ownership is not an automatic hedge",
+      "body": "A household’s labor income and investment returns can move differently. Coverage, benefit rules, fees, timing, and the distribution of gains determine whether investment exposure cushions wage losses."
+    },
+    {
+      "title": "Evidence has limits",
+      "body": "A source link records provenance, not independent verification. Pending links remain pending. Dates, geography, asset classes, and denominators must match before percentages can be compared."
+    }
+  ],
+  "background_label": "Read the underlying model",
+  "regional_label": "Read the regional research",
+  "source_filters": [
+    "All sources",
+    "Linked sources",
+    "Pending links"
+  ],
+  "source_empty": "No sources match this filter.",
+  "stage_label": "Stage",
+  "back_label": "Back to loop"
+}

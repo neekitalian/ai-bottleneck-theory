@@ -13,7 +13,8 @@ For local viewing, run `python3 -m http.server 8000` in this directory and open 
 ## Files
 
 - `index.html`: self-contained rendering, styling, and interactions.
-- `data/snapshot.json`: all displayed content, figures, dates, labels, and source metadata. Edit this file alone to update the board.
+- `data/snapshot.json`: the supplied figures, dates, labels, and source metadata. Edit this file alone to update those figures.
+- `data/explainer.json`: qualitative stage explanations, regional interpretation, reading guide, and source-filter labels. It adds no new numerical claims.
 - `LICENSE.md`: content licensed under CC BY 4.0; code under MIT.
 - [Model paper](ai-bottleneck-theory-v01.md) and [regional research note](pension-capital-and-ai.md): background analysis.
 
