@@ -1,7 +1,5 @@
 # Bottleneck Migration and Value Capture in the AI Revolution
 
-**v0.1 · 2026-10-28**
-
 > As cognitive capabilities become easier to replicate, economic growth becomes increasingly constrained by conditions that expand more slowly. Those who remove these constraints create value; those who control customers, critical resources, and transaction terms may be able to retain the returns over time.
 
 This project presents a testable mechanism framework and an illustrative model. It has not yet been validated with data and is not an industry forecast or a prediction of startup success rates.

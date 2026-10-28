@@ -1,7 +1,5 @@
 # Bottleneck Migration and Value Capture in the AI Revolution
 
-Version: v0.1 | Created: 2026-10-28
-
 Developed from discussion materials provided by Xiaoyue Lian. This paper is a testable mechanism framework and illustrative model. Its parameters have not been estimated using firm-level panel data. It is not an industry forecast, investment return model, or prediction of startup success rates.
 
 ## 1. Core proposition
@@ -173,7 +171,7 @@ An initial empirical study could phase deployment within one vertical workflow, 
 
 ## 11. Evidence audit and corrections to the source materials
 
-The entries below translate the evidence assessments recorded in the original v0.1 draft; they do not represent a new verification of the sources.
+The entries below translate the evidence assessments recorded in the original draft; they do not represent a new verification of the sources.
 
 | Material | Verification status recorded in this draft | What it may support | What it does not establish |
 | --- | --- | --- | --- |
