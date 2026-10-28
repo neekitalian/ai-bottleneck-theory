@@ -75,3 +75,7 @@ Capacity improvements also require investment. These scenarios exclude the incre
 3. When platforms offer similar features, do customers continue renewing independent solutions?
 
 The central research question is which conditions remain scarce as cognitive capabilities expand, and through what mechanisms that scarcity becomes returns and power.
+
+## Pension capital and ownership of AI returns
+
+The [regional research note](pension-capital-and-ai.md) extends the model to pension and sovereign capital across six jurisdictions in five regional panels. It compares investment routes, separates policy commitments from deployed assets, and asks how institutional ownership transmits AI returns to households. Checked figures, attributed reporting, and pending claims are identified separately.

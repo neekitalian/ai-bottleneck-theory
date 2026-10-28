@@ -220,3 +220,9 @@ The following sources were searched or read for the original draft. The model an
 ## 13. Minimum data needed for the next version
 
 Choose one workflow and record the following weekly: fixed task definitions; paying demand; available delivery capacity; authorization and acceptance capacity; actual delivery and success rates; unit prices; model, retry, human review, sales, and integration costs; fixed costs; customer retention; incidents and disputes; and platform alternatives. Only with these data is it appropriate to estimate bottlenecks, compare architectures, calculate returns on governance investment, and gradually extend the model to industry-level analysis.
+
+## 14. Institutional ownership and the distribution of AI returns
+
+Bottleneck control explains only part of value distribution. Ownership and financing determine who has claims on the resulting cash flows; pension mandates, fund fees, benefit rules, and fiscal arrangements influence whether those returns reach households. Labor-market exposure and investment exposure may overlap, but investment participation is not automatically an effective hedge against lost wages.
+
+The companion study, [Pension Capital, Sovereign Investors, and AI Value Capture](pension-capital-and-ai.md), compares the United States, Canada, the United Kingdom, the European Union, Japan, and Singapore. It distinguishes commitments from deployment, venture allocations from total AI exposure, and sovereign assets from individual pension entitlements. These institutional routes extend the framework rather than validate its causal claims.
