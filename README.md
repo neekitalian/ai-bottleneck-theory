@@ -1,79 +1,79 @@
-# AI革命的瓶颈迁移与收益分配模型
+# Bottleneck Migration and Value Capture in the AI Revolution
 
 **v0.1 · 2026-10-28**
 
-> 当认知能力变得更容易复制，经济增长会越来越受那些扩张较慢的条件约束。解除这些约束的人创造价值；能够控制客户、关键资源和交易条件的人，才可能持续留下收益。
+> As cognitive capabilities become easier to replicate, economic growth becomes increasingly constrained by conditions that expand more slowly. Those who remove these constraints create value; those who control customers, critical resources, and transaction terms may be able to retain the returns over time.
 
-本项目是一套可检验的机制框架与示意模型，尚未经过数据验证，不是行业预测或创业成功率预测。
+This project presents a testable mechanism framework and an illustrative model. It has not yet been validated with data and is not an industry forecast or a prediction of startup success rates.
 
-完整模型、公式假设、证据审计、创业结局定义和2027—2028条件情景见 **[模型全文](ai-bottleneck-theory-v01.md)**。
+For the complete model, assumptions, evidence audit, startup outcome definitions, and conditional scenarios for 2027–2028, see the **[full paper](ai-bottleneck-theory-v01.md)**.
 
-## 瓶颈是一张变化的权力网络
+## Bottlenecks form a changing network of power
 
-芯片、模型、平台、应用、信任层没有永久固定的高低顺序。关键问题是：在某个时间、某个业务里，缺少什么会让其他投入无法产生更多结果？
+Chips, models, platforms, applications, and trust infrastructure have no permanently fixed hierarchy. The key question is: in a particular business at a particular time, what missing condition prevents other inputs from producing more results?
 
 ```mermaid
 flowchart TD
-    A[认知任务成本下降] --> B[更多任务可行，更多团队进入]
-    B --> C[付费需求、可靠交付、授权验收形成约束]
-    C --> D[控制当前瓶颈者可能获得议价权]
-    D --> E[利润与资本积累]
-    E --> F[投资、收购与客户绑定]
-    F -->|强化集中| D
-    E --> G[新供给、替代方案与标准化]
-    G -->|削弱原瓶颈，改变约束位置| C
+    A[Lower cost of cognitive tasks] --> B[More tasks become feasible and more teams enter]
+    B --> C[Paying demand, reliable delivery, and authorization and acceptance constrain growth]
+    C --> D[Controllers of current bottlenecks may gain bargaining power]
+    D --> E[Profit and capital accumulation]
+    E --> F[Investment, acquisitions, and customer lock-in]
+    F -->|Reinforce concentration| D
+    E --> G[New supply, substitutes, and standardization]
+    G -->|Weaken existing bottlenecks and shift constraints| C
 ```
 
-- **集中力量：**已经赚到钱的人，更有能力投资、收购、控制渠道。
-- **扩散力量：**高利润吸引替代方案与新供给，标准化降低进入和切换成本。
+- **Concentration:** Profitable incumbents can invest, acquire competitors, and control distribution.
+- **Diffusion:** High profits attract substitutes and new supply; standardization lowers entry and switching costs.
 
-“最终一定集中”与“最终一定民主化”都不能预设。研究问题是：什么条件让其中一股力量占上风？
+Neither inevitable concentration nor inevitable democratization should be assumed. The research question is: under what conditions does one force dominate?
 
-## 最小可运算模型
+## A minimal operational model
 
-选择质量、时限和责任标准一致的任务，容量统一按“件/月”计量：
+Choose a task with consistent quality, deadline, and accountability requirements. Measure all capacities in completed tasks per month:
 
 $$
 Q^{\max}=\min\{D(p),K,T\}
 $$
 
-| 变量 | 含义 |
+| Variable | Meaning |
 | --- | --- |
-| D(p) | 当前价格下愿意付费且能触达的需求 |
-| K | 技术与资源支持的可靠交付能力 |
-| T | 组织能够授权、监督、验收并接受责任安排的能力 |
-| Q max | 可成交量上限，实际成交可能更低 |
+| D(p) | Reachable demand willing to pay at the current price |
+| K | Reliable delivery capacity supported by technology and resources |
+| T | Organizational capacity to authorize, supervise, accept results, and accept responsibility arrangements |
+| Q max | Maximum transaction volume; actual volume may be lower |
 
-在按上限交付的简化情景下：
+In the simplified case of operating at this limit:
 
 $$
 \pi=(p-c)Q^{\max}-F=mQ^{\max}-F
 $$
 
-其中，p是单价；c包含模型调用、重试、人工复核等变动成本；F是固定成本；m是单位贡献利润。
+Here, p is the price per completed task; c includes variable costs such as model calls, retries, and human review; F is fixed cost; and m is contribution margin per task.
 
-**能力增长 → 可成交量增长 → 利润增长，每一步都需要额外条件。** Agent调用次数增长，也不等于最终付费预算增长。
+**Capability growth → transaction volume growth → profit growth: every step requires additional conditions.** More agent calls do not necessarily mean larger end-customer budgets.
 
-这个最小值模型是短期严格互补近似，不能直接作为整个经济的生产函数。
+This minimum model is a short-run approximation with strictly complementary inputs. It should not be treated as a production function for the entire economy.
 
-## 示意情景
+## Illustrative scenarios
 
-全部数字均为示意参数，不是行业预测。固定售价20美元/件，固定成本2,000美元/月。
+All numbers are illustrative parameters, not industry forecasts. The price is fixed at $20 per task and fixed costs at $2,000 per month.
 
-| 情景 | D | K | T | m（美元/件） | Q max（件/月） | 利润（美元/月） |
+| Scenario | D | K | T | m ($/task) | Q max (tasks/month) | Profit ($/month) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 默认 | 1,000 | 600 | 300 | 6 | 300 | -200 |
-| 只提高交付能力 | 1,000 | 1,200 | 300 | 6 | 300 | -200 |
-| 从默认提高授权验收能力 | 1,000 | 600 | 600 | 6 | 600 | 1,600 |
-| 单位贡献利润下降 | 1,000 | 600 | 600 | 2 | 600 | -800 |
-| 需求成为瓶颈 | 200 | 1,500 | 1,500 | 6 | 200 | -800 |
+| Baseline | 1,000 | 600 | 300 | 6 | 300 | -200 |
+| Increase delivery capacity only | 1,000 | 1,200 | 300 | 6 | 300 | -200 |
+| Increase authorization and acceptance capacity from baseline | 1,000 | 600 | 600 | 6 | 600 | 1,600 |
+| Lower contribution margin | 1,000 | 600 | 600 | 2 | 600 | -800 |
+| Demand becomes the bottleneck | 200 | 1,500 | 1,500 | 6 | 200 | -800 |
 
-改善容量本身也需要投入；上述情景暂未计入扩容或治理项目的增量成本。
+Capacity improvements also require investment. These scenarios exclude the incremental costs of capacity expansion or governance projects.
 
-## 优先检验的问题
+## Priority questions to test
 
-1. 解除授权限制后，真实成交是否增加？
-2. 交付成本下降后，收益由应用公司、客户、上游还是渠道获得？
-3. 平台提供类似功能后，客户是否仍为独立方案续费？
+1. Does removing authorization constraints increase actual transactions?
+2. When delivery costs fall, who captures the gains: application companies, customers, upstream suppliers, or distributors?
+3. When platforms offer similar features, do customers continue renewing independent solutions?
 
-本模型最值得研究的是：认知能力扩张后，哪些条件仍然稀缺，这种稀缺又通过什么机制变成收益与权力。
+The central research question is which conditions remain scarce as cognitive capabilities expand, and through what mechanisms that scarcity becomes returns and power.

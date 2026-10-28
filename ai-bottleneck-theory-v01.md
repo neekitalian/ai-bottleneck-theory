@@ -1,222 +1,224 @@
-# AI革命的瓶颈迁移与收益分配模型
+# Bottleneck Migration and Value Capture in the AI Revolution
 
-版本：v0.1｜建立日期：2026-10-28
+Version: v0.1 | Created: 2026-10-28
 
-依据 Xiaoyue Lian 提供的讨论材料建立。本稿是可检验的机制框架与示意模型，尚未用企业面板数据估计参数，不是行业预测、投资回报模型或创业成功率预测。
+Developed from discussion materials provided by Xiaoyue Lian. This paper is a testable mechanism framework and illustrative model. Its parameters have not been estimated using firm-level panel data. It is not an industry forecast, investment return model, or prediction of startup success rates.
 
-## 1. 核心命题
+## 1. Core proposition
 
-当可复制的认知能力扩张，经济活动的限制会更明显地落在扩张较慢的互补条件上：电力与算力交付、独有业务知识、客户与分发、授权与验收、责任承担、最终支付能力。解除这些约束可以创造价值，但能够保留多少价值，还取决于替代方案、议价能力、竞争、产权与合同安排。
+As replicable cognitive capabilities expand, economic activity becomes more visibly constrained by complementary conditions that expand more slowly: electricity and computing capacity, proprietary business knowledge, customers and distribution, authorization and acceptance, responsibility for outcomes, and the ultimate ability to pay. Removing these constraints can create value, but how much value can be retained also depends on substitutes, bargaining power, competition, property rights, and contractual arrangements.
 
-因此，创业参与门槛下降与利润集中可以同时发生。前者降低试验成本，后者发生在难替代的互补资产仍由少数主体控制时。两者并不矛盾，也不是任何时期都必然成立。
+Lower barriers to starting a business can therefore coexist with concentrated profits. The former reduces experimentation costs; the latter arises when hard-to-replace complementary assets remain controlled by a small number of actors. These outcomes are compatible, but neither is inevitable in every period.
 
-这一框架综合了互补资产、瓶颈约束、交易成本与创业选择等已有思想。它的可发展之处在于把AI基础设施、企业组织、数据交易、agent治理与创业结局放在同一套可检验的结构里；不能据此宣称这些经济学原理本身全新。
+This framework combines existing ideas about complementary assets, bottleneck constraints, transaction costs, and entrepreneurial selection. Its potential contribution is to place AI infrastructure, enterprise organization, data transactions, agent governance, and startup outcomes within one testable structure. It does not establish that the underlying economic principles are new.
 
-## 2. 先划清三个不同的结果
+## 2. Distinguish three outcomes
 
-| 层面 | 问题 | 合适的观测量 | 不应替代它的指标 |
+| Level | Question | Suitable observations | Metrics that should not substitute for them |
 | --- | --- | --- | --- |
-| 技术能力 | 能否可靠完成任务？ | 固定任务、质量和时限下的成功率与有效吞吐量 | 单纯token量、模型榜单分数 |
-| 经济价值 | 结果是否值得付费？ | 实际节省的总成本、增量收入、客户续约和付费任务量 | 注册量、agent调用量、融资额 |
-| 价值分配 | 谁留下收益、谁承担风险？ | 扣除上游、交付和风险成本后的利润，客户剩余，创始人稀释后收益 | 公司估值、营收增长、行业总需求 |
+| Technical capability | Can the task be completed reliably? | Success rate and effective throughput for a fixed task, quality standard, and deadline | Token volume alone or model benchmark scores |
+| Economic value | Is the result worth paying for? | Actual total cost savings, incremental revenue, customer renewals, and paid task volume | Registrations, agent calls, or funding raised |
+| Value distribution | Who retains returns, and who bears risk? | Profit after upstream, delivery, and risk costs; customer surplus; founder returns after dilution | Valuation, revenue growth, or total industry demand |
 
-Agent不是拥有无限独立预算的最终消费者。机器调用可以大幅扩张，但预算来自企业、家庭或公共部门；大量调用也可能是重试、内部协调或冗余，而不是新增经济价值。
+Agents are not final consumers with unlimited independent budgets. Machine calls may expand dramatically, but their budgets come from businesses, households, or the public sector. Many calls may represent retries, internal coordination, or redundancy rather than additional economic value.
 
-## 3. 最小可运算模型
+## 3. A minimal operational model
 
-以一种质量、时限和责任条件固定的工作流为分析单位，例如“满足验收条件的一次采购执行”。所有容量均换算为每月可完成的同类有效任务数，不把GPU数量、员工人数和身份数量直接相加。
+Use a workflow with fixed quality, deadline, and responsibility requirements as the unit of analysis—for example, one procurement transaction meeting acceptance criteria. Convert every capacity into the number of equivalent valid tasks that can be completed per month. Do not directly add GPU counts, employee counts, and identity counts.
 
 \[
 Q_t^{\max}=\min\{D_t(p),K_t,T_t\}
 \]
 
-- D_t(p)：在价格p下，客户愿意付费且能触达的任务量。包含最终预算约束。
-- K_t：达到质量要求的可靠交付能力。已经折算模型能力、算力、电力、业务数据、人员和工具集成等限制。
-- T_t：客户能够授权、监督、验收并接受责任安排的任务量上限。它是组织流程的能力，不是抽象的“信任指数”。
-- Q_t^{max}：可成交量上限。实际成交还可能受销售、排队、任务匹配等影响而更低。
+- D_t(p): Reachable task demand that customers are willing to pay for at price p. This includes the ultimate budget constraint.
+- K_t: Reliable delivery capacity meeting the required quality standard. This incorporates limits from models, computing resources, electricity, business data, personnel, and tool integration.
+- T_t: The maximum task volume that customers can authorize, supervise, accept, and accommodate under the relevant responsibility arrangements. This is organizational process capacity, not an abstract “trust index.”
+- Q_t^{max}: Maximum transaction volume. Actual transactions may be lower because of sales, queues, task matching, or other factors.
 
-在按可成交量上限交付的简化情景下：
+In the simplified scenario of delivering at this limit:
 
 \[
 \pi_t=(p_t-c_t)Q_t^{\max}-F_t=m_tQ_t^{\max}-F_t
 \]
 
-- p_t：每件合格结果的价格。
-- c_t：每件合格结果的变动成本，包含模型调用、重试、人工复核、按量集成或客服、可估计的预期事故成本等，避免只计算token成本。
-- F_t：当期固定经营成本，含固定研发、管理、销售和基础运维。与c_t的分界应保持一致，不能重复计费。
-- m_t=p_t-c_t：单位贡献利润，尚未扣固定成本。
-- π_t：简化经营利润，不是自由现金流，也不是创始人的个人收入。未单列税务、融资、资本性支出与营运资金。
+- p_t: Price per accepted result.
+- c_t: Variable cost per accepted result, including model calls, retries, human review, usage-based integration or customer support, and estimable expected incident costs. Counting only token costs is insufficient.
+- F_t: Fixed operating costs for the period, including fixed research and development, administration, sales, and basic operations. The boundary between F_t and c_t must remain consistent to avoid double counting.
+- m_t=p_t-c_t: Contribution margin per task, before fixed costs.
+- π_t: Simplified operating profit, not free cash flow or the founder’s personal income. Taxes, financing, capital expenditures, and working capital are not separately modeled.
 
-如果m为负，增加交付会增加亏损；理性企业可减少或停止交付，不能把“有容量”直接当成“应该运行”。如果m为正，盈亏平衡量为F/m，离散任务取向上整数。
+If m is negative, delivering more increases losses. A rational business may reduce or stop delivery; available capacity does not imply that it should be used. If m is positive, break-even volume is F/m, rounded up for discrete tasks.
 
-本模型是短期的严格互补近似。在某些业务里人工可替代自动化，外包可替代自建，约束边界较平滑；更精细的研究应使用队列模型或允许替代的生产函数。不能把一个业务的min函数直接当成全球GDP模型。
+This is a short-run approximation with strictly complementary inputs. In some businesses, humans can substitute for automation, outsourcing can substitute for in-house production, and constraint boundaries are smoother. More detailed research should use queueing models or production functions that allow substitution. A business-level minimum function cannot be directly treated as a model of global GDP.
 
-## 4. 交互模拟的定义与结果
+## 4. Simulation definitions and results
 
-模拟器的全部数字都是示意参数，不来自市场测量。固定售价为20美元/件，固定成本为2,000美元/月。默认D=1,000、K=600、T=300、m=6，因而c=14。调整m表示交付成本变化，价格不变，因此演示中不另行改变需求曲线。
+Every number in the simulator is illustrative rather than measured from the market. The price is fixed at $20 per task, and fixed costs are $2,000 per month. The baseline is D=1,000, K=600, T=300, and m=6, implying c=14. Adjusting m represents a change in delivery cost while holding price constant, so the demonstration does not separately shift the demand curve.
 
-| 条件变化 | 可成交量上限 | 按上限交付的经营利润 | 含义 |
+| Change in conditions | Maximum transaction volume | Operating profit at capacity | Interpretation |
 | --- | ---: | ---: | --- |
-| 默认：D=1000，K=600，T=300，m=6 | 300件/月 | -200美元/月 | 授权验收约束压住了吞吐量 |
-| 仅把K从600提高到1200 | 300件/月 | -200美元/月 | 增加非瓶颈容量不能增加产出；若实际增加成本，利润还会下降 |
-| 在默认情景把T提高到600 | 600件/月 | 1600美元/月 | 解除当前约束后，可靠交付成为并列瓶颈 |
-| 保持D=1000、K=T=600，把m降到2 | 600件/月 | -800美元/月 | 活动扩张不保证价值留存 |
-| D=200，K=T=1500，m=6 | 200件/月 | -800美元/月 | 需求可以成为约束；算力和治理都不能代替付费 |
+| Baseline: D=1000, K=600, T=300, m=6 | 300 tasks/month | -$200/month | Authorization and acceptance constrain throughput |
+| Increase only K from 600 to 1200 | 300 tasks/month | -$200/month | Adding non-bottleneck capacity does not increase output; profit would fall if doing so adds costs |
+| Increase T to 600 from baseline | 600 tasks/month | $1,600/month | Removing the current constraint makes reliable delivery a joint bottleneck |
+| Keep D=1000 and K=T=600, but reduce m to 2 | 600 tasks/month | -$800/month | More activity does not guarantee value capture |
+| D=200, K=T=1500, m=6 | 200 tasks/month | -$800/month | Demand can be the constraint; computing and governance cannot substitute for willingness to pay |
 
-这是模型假设的机械推论，不是对假设真实性的独立证明。提高T在现实中也要花钱。模拟器只做局部敏感性分析，把治理或扩容项目的成本暂时排除在情景变化之外；商业决策必须再扣除增量成本。
+These results follow mechanically from the assumptions; they do not independently validate those assumptions. Increasing T also costs money in practice. The simulator is a local sensitivity analysis that temporarily excludes the costs of governance or capacity expansion projects from scenario changes. Business decisions must deduct those incremental costs.
 
-解除某个约束是否值得投资，应计算：
+To evaluate whether removing a constraint is worth the investment, calculate:
 
 \[
 \Delta\pi=m\,\Delta Q-\Delta F-\Delta c\,Q_{new}
 \]
 
-其中m为原单位贡献利润，Δc为每件变动成本的变化。如果多项约束并列，可能必须同时改善才能增加Q。
+Here, m is the original contribution margin per task, and Δc is the change in variable cost per task. When several constraints bind simultaneously, they may need to be improved together before Q increases.
 
-## 5. 从业务瓶颈推导产业权力
+## 5. From business bottlenecks to industry power
 
-权力在本框架中指影响其他参与者获得关键资源、进入市场或实现收益的能力。它不等于市值、名气或技术先进程度。
+In this framework, power means the ability to affect other participants’ access to critical resources, market entry, or returns. It is not equivalent to market capitalization, visibility, or technical sophistication.
 
-基本循环是：能力和成本变化 → 新任务变得可行 → 互补条件形成约束 → 可交付结果增长受限 → 瓶颈控制者可能获得更强议价权 → 利润吸引投资、替代与标准化 → 原瓶颈缓解或被绕过 → 新约束显现。
+The basic cycle is: changes in capability and cost → new tasks become feasible → complementary conditions become constraints → growth in deliverable results is limited → bottleneck controllers may gain bargaining power → profits attract investment, substitutes, and standardization → existing bottlenecks ease or are bypassed → new constraints emerge.
 
-这里有两个相反的反馈：
+Two opposing feedback mechanisms operate:
 
-- 集中反馈：利润帮助控制者进一步投资、收购与绑定客户，增强资源控制。
-- 扩散反馈：高利润吸引竞争、替代架构和新供给；标准化降低切换成本，可能压低原有租金。
+- Concentration: Profits help controllers invest further, acquire businesses, and lock in customers, strengthening resource control.
+- Diffusion: High profits attract competition, alternative architectures, and new supply. Standardization lowers switching costs and may compress existing rents.
 
-如果扩容有长交付周期，两者会交替占主导；如果网络效应和客户切换成本长期更强，集中可能持续。因此不能预设2027从芯片迁向治理、2028再迁向应用。不同地区、行业和工作流可以同时受不同约束限制。
+If capacity expansion has long lead times, the two forces may alternate in dominance. If network effects and customer switching costs remain stronger, concentration may persist. It is therefore inappropriate to assume that bottlenecks will shift from chips to governance in 2027 and then to applications in 2028. Different regions, industries, and workflows can face different constraints simultaneously.
 
-| 候选约束 | 控制条件是什么 | 如何观察它是否真的在限制增长 | 为什么未必能带来持久利润 |
+| Candidate constraint | What is controlled? | How to observe whether it constrains growth | Why it may not generate lasting profits |
 | --- | --- | --- | --- |
-| 算力、电力与制造 | 可交付的容量、接入与供应链 | 排队时间、利用率、订单交付与有效计算成本 | 新供给、替代技术、资本成本与周期 |
-| 业务知识和数据 | 获得有权使用的高质量数据及更新流 | 有无数据时的任务完成率差异 | 数据可替代、静态数据过时、买方议价 |
-| 客户、工作流与分发 | 可触达预算和可嵌入流程 | 付费转化、留存、销售周期、迁移成本 | 渠道抽成、平台捆绑、产品同质化 |
-| 授权、验收与问责 | 可执行权限、可追溯责任和可接受的残余风险 | 试点到生产的转化率、授权延迟、人工复核时长 | 现有安全平台可覆盖，标准可免费实现 |
-| 最终需求 | 实际预算与结果价值 | 续费、取消、任务增量、净收益 | 短期补贴和试验预算可能消失 |
+| Computing, electricity, and manufacturing | Deliverable capacity, access, and supply chains | Queue times, utilization, order fulfillment, and effective computing costs | New supply, substitutes, capital costs, and cycles |
+| Business knowledge and data | Access to high-quality data with valid usage rights and ongoing updates | Differences in task completion with and without the data | Substitutability, stale static data, and buyer bargaining power |
+| Customers, workflows, and distribution | Access to budgets and the ability to embed in processes | Paid conversion, retention, sales cycles, and migration costs | Distribution fees, platform bundling, and product commoditization |
+| Authorization, acceptance, and accountability | Enforceable permissions, traceable responsibility, and acceptable residual risk | Pilot-to-production conversion, authorization delays, and human review time | Existing security platforms may cover the need; standards may be implemented for free |
+| Final demand | Actual budgets and the value of results | Renewals, cancellations, additional tasks, and net benefits | Temporary subsidies and experimental budgets may disappear |
 
-关键限制：解决瓶颈与收取瓶颈租金是两回事。某项开放标准可能非常有社会价值，却没有单个企业可独占的收费权；反之，高收费也不自动意味着净社会价值高。
+A key limitation: solving a bottleneck and collecting bottleneck rents are different things. An open standard may create substantial social value without giving any one company exclusive charging rights. Conversely, high fees do not automatically imply high net social value.
 
-## 6. 对数据分成与agent信任层的具体推论
+## 6. Implications for data revenue sharing and agent trust infrastructure
 
-micro1的企业数据采购计划说明运营知识可能有商业价值，但不能单凭采购承诺推断每个数据卖家均被低估。需要比较数据的可替代性、更新频率、训练效果、许可范围和竞争外溢。
+micro1’s enterprise data acquisition program suggests that operational knowledge may have commercial value. A procurement commitment alone does not establish that every data seller is underpaid. Assessments should compare substitutability, update frequency, training effects, licensing scope, and competitive spillovers.
 
-Revenue sharing是可选的风险收益安排，不是唯一合理解。还可能使用一次性授权、年度订阅、最低保证金加分成、按明确产品收入池分成或里程碑付款。分成不必追踪每一次推理究竟“用了哪条训练数据”；合同可以约定可审计的收入基数。数据来源记录、权限与审计有帮助，但标记数据不能自动解决训练贡献归因或保证权利执行。
+Revenue sharing is one possible risk-and-return arrangement, not the only reasonable one. Alternatives include one-time licenses, annual subscriptions, minimum guarantees plus revenue shares, shares of clearly defined product revenue pools, and milestone payments. Revenue sharing need not trace exactly which training record was “used” in each inference; contracts can define an auditable revenue base. Provenance, permissions, and audits help, but tagging data does not automatically solve training-contribution attribution or ensure enforceable rights.
 
-对agent信任创业，合理的切入假说是：跨系统或跨组织的授权和责任交接存在现有产品未充分解决的摩擦，客户愿意为减少这一摩擦付费。这比“所有agent都需要身份证，所以独立身份公司必胜”更可测试。
+For an agent trust startup, a reasonable entry hypothesis is that cross-system or cross-organization authorization and responsibility handoffs contain friction that existing products do not adequately address, and customers will pay to reduce it. This is more testable than “every agent needs an ID, so an independent identity company must win.”
 
-例如可以选择一个跨公司采购场景，验证是否能：
+For example, choose a procurement workflow spanning companies and test whether the solution can:
 
-1. 清楚表达谁授权哪个agent、可以做什么、金额与时限边界；
-2. 及时撤销或缩小授权，并在既有系统中执行；
-3. 保留从授权到行动到验收的可检查记录；
-4. 降低进入生产环境的时间或人工核验成本；
-5. 在现有身份或安全供应商提供类似能力时仍能获得续费。
+1. Clearly express who authorizes which agent, what it may do, and its spending and time limits.
+2. Revoke or narrow authorization promptly and enforce the changes in existing systems.
+3. Preserve inspectable records from authorization through action to acceptance.
+4. Reduce the time needed to enter production or the cost of manual verification.
+5. Retain renewals when existing identity or security vendors offer similar capabilities.
 
-密码学证明或身份标签本身不等于法律责任认定，也不意味着平台必须接受一个独立认证机构。互操作性优势需要在具体流程中证明。
+Cryptographic proofs or identity labels do not by themselves determine legal responsibility, nor do they require platforms to accept an independent certification authority. Interoperability advantages must be demonstrated in a specific workflow.
 
-## 7. 创业数量与有效率：不用未经验证的行业百分比
+## 7. Startup entry and viability: avoid unverified industry percentages
 
-不能拿不同时期、地区、融资阶段的公司总数，配上另一组退出数，反推出可信成功率。没有退出的公司可能还年轻、仍独立经营，或资料缺失；被收购也可能是高回报、低价救助或人才收购。
+Combining company counts from different periods, regions, or funding stages with unrelated exit counts does not produce a credible success rate. Companies that have not exited may still be young, independently operating, or missing from available records. Acquisitions may represent high returns, distressed sales, or acquihires.
 
-建议先定义同一成立期、同一业务类别和同一地区的公司队列，观察5年或更长时间，并预先定义“有效”：
+Start with a cohort sharing a founding period, business category, and region. Observe it for at least five years and define “effective” in advance:
 
-- 客户有效：持续解决问题，存在复购或续费。
-- 企业有效：扣除合理交付与组织成本后能够独立经营。
-- 股东有效：稀释和清算优先权后的实际收益达到门槛。
-- 社会有效：即使企业退出或关闭，技术、人才或制度是否产生可观察的外溢。
+- Customer effectiveness: The company continuously solves a problem, with repeat purchases or renewals.
+- Business viability: The company can operate independently after reasonable delivery and organizational costs.
+- Shareholder effectiveness: Actual returns after dilution and liquidation preferences meet a defined threshold.
+- Social effectiveness: Technology, talent, or institutional practices generate observable spillovers even if the company exits or closes.
 
-这四者不能相互替代。历史上重要的公司不一定给创始人高收益；小型盈利公司也不是失败。
+These dimensions are not interchangeable. Historically important companies need not generate high founder returns; small profitable companies are not failures.
 
-在观察截止日，将状态分为互斥的：被收购、关闭、独立且经营可持续、独立但尚未达到可持续、状态未知。对仍存续的样本处理右删失，对退出使用竞争风险方法。若暂无数据，标注“待估计”，不提供1%–5%或85%–90%这类精确外观的数字。
+At the observation cutoff, classify companies into mutually exclusive states: acquired, closed, independently operating and sustainable, independently operating but not yet sustainable, or unknown. Account for right censoring among surviving firms and use competing-risks methods for exits. Without data, mark estimates as pending rather than supplying precise-looking figures such as 1%–5% or 85%–90%.
 
-机制上，进入成本下降会增加试验数N。若可支持的可持续业务数S增长较慢，比例S/N会下降，即使S的绝对数量仍增长。S不是预先固定的历史席位：新市场、差异化和更低成本都能扩大它。
+Mechanistically, lower entry costs increase the number of experiments N. If the number of sustainable businesses S grows more slowly, the ratio S/N falls even while S rises in absolute terms. S is not a predetermined set of historical winner slots: new markets, differentiation, and lower costs can expand it.
 
-| 业务结果有持续客户价值？ | 能保留足够收益？ | 更可能出现的路径，非概率预测 |
+| Does the business provide lasting customer value? | Can it retain sufficient returns? | Possible paths, not probability forecasts |
 | --- | --- | --- |
-| 是 | 是 | 独立经营、扩张，或主动选择战略交易 |
-| 是 | 否 | 重新谈渠道或定价、降低成本、转型，或被整合；也可能关闭 |
-| 尚不能证明 | 暂时有资金或渠道支持 | 继续验证，或变成依赖融资与补贴的业务 |
-| 否 | 否 | 转向、缩小范围或停止经营 |
+| Yes | Yes | Independent operation, expansion, or a voluntary strategic transaction |
+| Yes | No | Renegotiate distribution or pricing, reduce costs, pivot, or be integrated; closure remains possible |
+| Not yet demonstrated | Temporarily supported by capital or distribution | Continue validation, or become dependent on financing and subsidies |
+| No | No | Pivot, narrow the scope, or stop operating |
 
-## 8. 为什么“学历、口才、人脉”不是创业占优的充分条件
+## 8. Why credentials, communication skills, and networks are insufficient
 
-它们能降低搜索、融资、招募与客户接触成本，但不自动创造付费需求、可靠产品、行业知识或议价能力。所谓“特定空间”的优势应测量为获得客户、团队、资金与试验机会的成本更低，而不是某类人拥有必胜资格。
+These advantages can reduce search, fundraising, recruiting, and customer access costs. They do not automatically create paying demand, reliable products, industry knowledge, or bargaining power. An advantage within a particular environment should be measured as lower costs of accessing customers, teams, funding, and experimentation—not as a guarantee that a particular group will win.
 
-职业决策还要比较工作机会的薪酬、学习、签证、现金储备、家庭约束与将来创业的选择权。创业失败成本不接近普遍的零；加入成熟组织也可能获得难以在校内获得的数据、客户经验和交付能力。
+Career decisions must also compare compensation, learning opportunities, visas, cash reserves, family constraints, and the option to start a business later. Startup failure costs are not universally close to zero. Joining an established organization can provide access to data, customer experience, and delivery capabilities that are difficult to obtain at school.
 
-较合理的策略是先购买信息：用有限时间和预算测试真实付费任务，设定继续投入的条件。比如是否获得重复使用与续约、人工介入是否随规模降低、扣除获客和交付成本后是否留下贡献利润。这不是要求先取得融资才可创业，也不是要求年轻人必须创业。
+A reasonable strategy is to acquire information first: test real paid tasks with limited time and money, and define conditions for further investment. Examples include repeat use and renewals, declining human intervention as volume grows, and positive contribution margin after acquisition and delivery costs. This does not require raising funding before starting a business, nor does it imply that young people must become founders.
 
-## 9. 2027–2028的条件情景
+## 9. Conditional scenarios for 2027–2028
 
-不为没有校准的数据分配“高置信度概率”。下面是条件情景，并非时间表。
+Do not assign “high-confidence probabilities” without calibrated data. These are conditional scenarios, not a timetable.
 
-| 情景 | 需要观察的条件 | 模型推论 | 对独立创业公司的关键问题 |
+| Scenario | Conditions to observe | Model implication | Key question for independent startups |
 | --- | --- | --- | --- |
-| 平台持续集中 | 有效产能紧张、平台控制分发、跨平台迁移成本高 | 瓶颈控制者保留更多议价权 | 能否提供平台缺失且不能轻易捆绑的能力？ |
-| 应用价值扩散 | 可靠交付成本下降、用户愿付费需求扩大、集成更容易 | 更小的团队也能独立经营 | 客户关系、工作流与差异化是否可持续？ |
-| 治理需求被平台吸收 | 授权和审计越来越重要，但平台原生功能足够 | 治理重要性上升，独立治理商利润未必上升 | 跨组织、跨供应商需求是否真实存在？ |
-| 付费需求不足 | 调用增长但续费弱、净收益低、试验预算收缩 | D成为约束，硬件和应用均可能受影响 | 是否创造了可计价结果，而不只是更多活动？ |
+| Continued platform concentration | Effective capacity remains scarce, platforms control distribution, and cross-platform migration is costly | Bottleneck controllers retain greater bargaining power | Can the startup provide a missing capability that platforms cannot easily bundle? |
+| Application value diffuses | Reliable delivery costs fall, willingness to pay expands, and integration becomes easier | Smaller teams can operate independently | Are customer relationships, workflow integration, and differentiation sustainable? |
+| Platforms absorb governance demand | Authorization and audits become more important, but native platform features are sufficient | Governance becomes more important without necessarily raising independent vendors’ profits | Is cross-organization, cross-vendor demand real? |
+| Insufficient paying demand | Calls grow but renewals are weak, net benefits are low, and experimental budgets shrink | D becomes the constraint, potentially affecting both hardware and applications | Does the business create billable results rather than merely more activity? |
 
-这些情景可以在不同细分市场同时出现。
+These scenarios can coexist across market segments.
 
-## 10. 如何检验，怎样算模型被削弱
+## 10. Testing the model and identifying weakening evidence
 
-| 可检验命题 | 应记录的数据 | 支持证据 | 反证或削弱证据 |
+| Testable proposition | Data to collect | Supporting evidence | Contradictory or weakening evidence |
 | --- | --- | --- | --- |
-| 授权验收是某工作流的当前瓶颈 | 可运行能力、审批时长、通过验收的付费任务量 | 在能力与需求相近时，解除审批约束显著增加有效成交 | 降低审批时长却没有增加有效成交，失败主要来自质量或无预算 |
-| 基础模型能力改善不保证应用利润增加 | 同一企业的调用成本、人工成本、售价、留存与利润 | 成本下降被降价、竞争或平台抽成抵消 | 应用利润持续普遍扩张，互补资产控制不解释差异 |
-| 中立信任服务存在独立购买价值 | 付费试点、续约、采购预算归属、平台替代报价 | 客户在原生产品存在时仍为跨组织能力持续付费 | 客户只使用免费工具或既有平台捆绑功能 |
-| 创业进入变容易与利润集中可以并存 | 同期新进入数、营业利润集中度、可持续企业绝对数量 | 进入增加同时利润集中度上升 | 新进入数、可持续企业数与收益分配持续同步扩散 |
-| 社会配套的改善可提升AI价值兑现 | 分期部署或可比团队的验收、复核、事故和净收益 | 固定任务与质量后，配套改善产生净收益 | 扣除集成、复核和风险成本后没有净收益 |
+| Authorization and acceptance are the current bottleneck in a workflow | Operational capacity, approval time, and paid tasks passing acceptance | With similar capability and demand, removing approval constraints substantially increases valid transactions | Shorter approvals do not increase valid transactions; failures primarily reflect quality problems or insufficient budgets |
+| Better foundation models do not guarantee higher application profits | Calling costs, labor costs, prices, retention, and profits within the same firms | Price cuts, competition, or platform fees offset cost reductions | Application profits expand broadly and persistently, with control of complementary assets failing to explain differences |
+| Neutral trust services have independent purchasing value | Paid pilots, renewals, budget ownership, and platform alternative quotes | Customers continue paying for cross-organization capabilities despite native alternatives | Customers use only free tools or bundled platform features |
+| Easier startup entry can coexist with profit concentration | New entrants, operating profit concentration, and the absolute number of sustainable firms over the same period | Entry rises while profit concentration increases | Entry, sustainable firm counts, and returns consistently diffuse together |
+| Improvements in complementary conditions help realize AI value | Acceptance, review, incidents, and net benefits across phased deployments or comparable teams | Holding tasks and quality fixed, improvements generate net benefits | No net benefit remains after integration, review, and risk costs |
 
-首轮实证可在一个垂直工作流做分期上线，预先定义任务与成本口径，设置可比较的人工/原流程组。模型调用量只作为投入，不作为成效。对事故等低频事件，短期零事故不能证明风险为零。
+An initial empirical study could phase deployment within one vertical workflow, predefine tasks and cost accounting, and include a comparable manual or existing-process group. Treat model calls as inputs, not outcomes. For rare incidents, a short period with zero incidents does not establish zero risk.
 
-## 11. 证据审计与原材料的修正
+## 11. Evidence audit and corrections to the source materials
 
-| 材料 | 截至本稿核查状态 | 允许支持什么 | 不能推出什么 |
+The entries below translate the evidence assessments recorded in the original v0.1 draft; they do not represent a new verification of the sources.
+
+| Material | Verification status recorded in this draft | What it may support | What it does not establish |
 | --- | --- | --- | --- |
-| 微软2026-10-26自愿离职方案 | 官方公告确认四国部分团队、70级及以下适用；约6万人可参与另有Reuters报道 | 组织正在调整配置 | 6万人已被裁；被列入岗位已被AI替代；人力节省与GPU投资逐笔对应 |
-| 微软约1900亿美元资本开支 | 用户材料存在财年/自然年混用；本次Reuters报道为2026自然年1750亿美元 | 需要用相同日期与口径重新核对 | 不能将混合口径金额放进模型直接求因果 |
-| micro1数据计划 | 官方2026-10-09公告承诺未来12个月10亿美元采购/授权数据，用于RL环境 | 企业运营数据受到商业采购关注 | 10亿美元已经花完；所有合同条件、卖方收益或市场公平性已经被证实 |
-| Gartner 2027战略趋势 | 官方文章列出AI agent identity，并提供2028安全事件预测 | 分析机构认为治理值得关注 | 预测中的事件已经发生；独立身份公司必然获得利润 |
-| Agent身份市场 | Microsoft Entra Agent ID官方文档已有身份、授权和责任人机制 | 存在真实需求和现有竞争 | 信任层完全空置；巨头无法提供跨平台能力 |
-| a16z 2026-10-23文章 | 用户提供了正文，未附可复算图表或底层序列 | 作者描述的GPU租赁、工业供应链和网安指标是研究线索 | 全行业永久需求确定；租金涨幅等于利润；历史折旧被证伪 |
-| 年轻创始人的优势 | NBER/Census历史研究显示高速增长企业创始人并非普遍年轻，行业经验重要 | 不能用少数年轻亿万富翁代表创业基率 | 旧样本直接确定本轮AI创业年龄分布，或年轻人不能成功 |
-| AI创业有效率和死亡率 | 原材料未提供可复核的统一队列、分母、观察期和退出定义 | 暂作为待研究问题 | 不能将原来的精确百分比当作已知参数 |
+| Microsoft voluntary exit offer dated 2026-10-26 | Official announcement confirmed eligibility for selected teams in four countries at level 70 and below; Reuters separately reported approximately 60,000 eligible employees | The organization is adjusting resource allocation | That 60,000 people have been laid off; that eligible roles have been replaced by AI; or that personnel savings correspond directly to GPU investment |
+| Approximately $190 billion in Microsoft capital expenditure | User materials mixed fiscal and calendar years; the Reuters report consulted stated $175 billion for calendar 2026 | Figures require reconciliation using consistent dates and definitions | Mixed-basis amounts cannot be inserted into the model to infer causality |
+| micro1 data program | Official announcement dated 2026-10-09 committed $1 billion over the next 12 months to acquiring or licensing data for reinforcement learning environments | Enterprise operational data is attracting commercial procurement interest | That the full $1 billion has been spent, or that contract terms, seller returns, or market fairness have been established |
+| Gartner strategic trends for 2027 | Official article listed AI agent identity and provided a forecast of security incidents in 2028 | An analyst firm considers governance worthy of attention | That forecast incidents have already occurred or that independent identity companies will necessarily profit |
+| Agent identity market | Official Microsoft Entra Agent ID documentation already described identity, authorization, and responsible-owner mechanisms | There is demand and existing competition | That trust infrastructure is an empty market or large platforms cannot provide cross-platform capabilities |
+| a16z article dated 2026-10-23 | The user supplied the text, without reproducible charts or underlying series | Its GPU rental, industrial supply chain, and cybersecurity indicators are research leads | Permanent industry-wide demand, equivalence between rent increases and profits, or disproof of historical depreciation assumptions |
+| Advantages of young founders | Historical NBER/Census research found that founders of high-growth firms are not generally very young and that industry experience matters | A few young billionaires cannot establish startup base rates | That historical samples determine the age distribution of AI founders in 2026, or that young founders cannot succeed |
+| AI startup effectiveness and failure rates | Source materials lacked a reproducible common cohort, denominator, observation period, and exit definition | These remain research questions | Previously quoted precise percentages cannot be treated as known parameters |
 
-额外的推理修正：
+Additional corrections to the reasoning:
 
-- 资产的会计折旧与租赁服务的市场价格不同；租价上涨不能单独证明经济寿命延长或投资一定盈利。
-- 机构预测、公司自报KPI与独立审计结果是不同等级的证据。
-- AI此前已有自动化计算、搜索和决策系统的历史，不能笼统说这次才首次自动化认知。
-- 工作均值、收入中位数、方差和财富集中度不同，不能只凭裁员和成功案例判断它们全部如何变化。
-- 租用模型也能经营盈利业务。重要的是客户、产品和合同上的可持续收益，而不是必须拥有每一层生产资料。
-- 财务估值、融资、合同承诺、收入与实际现金流必须分列。
+- Accounting depreciation and market prices for rental services are different. Higher rental prices alone do not prove longer economic life or profitable investment.
+- Institutional forecasts, company-reported indicators, and independently audited results have different evidentiary strength.
+- Automated computation, search, and decision systems predate this AI wave. It is inaccurate to say that cognition is only now being automated for the first time.
+- Mean employment outcomes, median income, variance, and wealth concentration are distinct. Layoffs and success stories alone do not establish how all of them are changing.
+- Businesses can profit while renting models. Sustainable returns depend on customers, products, and contracts, not ownership of every layer of production.
+- Valuation, financing, contractual commitments, revenue, and actual cash flow must be distinguished.
 
-## 12. 来源
+## 12. Sources
 
-以下为本轮检索或阅读的来源。前述模型及因果推论由本稿提出，不应被理解为这些来源已经验证整个模型。
+The following sources were searched or read for the original draft. The model and causal propositions are proposed by this paper; these sources should not be understood as validating the entire framework.
 
-1. Microsoft, Amy Coleman, “Introducing a Voluntary Exit Offer”, 2026-10-26。
+1. Microsoft, Amy Coleman, “Introducing a Voluntary Exit Offer,” 2026-10-26.
    https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/
-2. Reuters, “Microsoft offers buyouts to around 60,000 employees to contain costs”, 2026-10-26。
+2. Reuters, “Microsoft offers buyouts to around 60,000 employees to contain costs,” 2026-10-26.
    https://www.reuters.com/technology/microsoft-is-offering-buyouts-around-60000-employees-business-insider-reports-2026-10-26/
-3. micro1, Ali Ansari, “micro1 announces commitment to spend $1B on enterprise data acquisition over the next 12 months”, 2026-10-09。
+3. micro1, Ali Ansari, “micro1 announces commitment to spend $1B on enterprise data acquisition over the next 12 months,” 2026-10-09.
    https://www.micro1.ai/blog/micro1-commits-1b-to-enterprise-data-acquisition
-4. Gartner, “Top Strategic Technology Trends for 2027”。本稿将其视为机构预测。
+4. Gartner, “Top Strategic Technology Trends for 2027.” Treated here as an institutional forecast.
    https://www.gartner.com/en/articles/top-technology-trends-2027
-5. Microsoft Learn, “Agent identities in Microsoft Entra Agent ID”。
+5. Microsoft Learn, “Agent identities in Microsoft Entra Agent ID.”
    https://learn.microsoft.com/en-us/entra/agent-id/agent-identities
-6. IEA, “Key Questions on Energy and AI”, Executive summary。物理供给、资金与社会配套的限制参见该报告；其中未来需求数值属于预测。
+6. IEA, “Key Questions on Energy and AI,” executive summary. Referenced for physical supply, financing, and complementary constraints; future demand figures are forecasts.
    https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary
-7. Azoulay, Jones, Kim & Miranda, “Age and High-Growth Entrepreneurship”, NBER Working Paper 24489, 2018。历史样本，不直接外推为2026年AI创业基率。
+7. Azoulay, Jones, Kim & Miranda, “Age and High-Growth Entrepreneurship,” NBER Working Paper 24489, 2018. Historical sample; not directly extrapolated to AI startup base rates in 2026.
    https://www.nber.org/papers/w24489
    https://www.census.gov/library/working-papers/2018/adrm/ces-wp-18-23.html
-8. Brynjolfsson, Li & Raymond, “Generative AI at Work”, Quarterly Journal of Economics, 2025。单一客服情境的实证研究，不代表所有认知劳动。
+8. Brynjolfsson, Li & Raymond, “Generative AI at Work,” Quarterly Journal of Economics, 2025. An empirical study in one customer-support setting, not representative of all cognitive labor.
    https://doi.org/10.1093/qje/qjae044
-9. Moses Sternstein, a16z, “Charts of the Week: Attention is All You Need”, 2026-10-23。阅读用户提供的正文版本，未独立复算所引用图表。
+9. Moses Sternstein, a16z, “Charts of the Week: Attention is All You Need,” 2026-10-23. Read in the text supplied by the user; cited charts were not independently reproduced.
    https://www.a16z.news/p/charts-of-the-week-attention-is-all
 
-## 13. 下一版需要补入的最小数据
+## 13. Minimum data needed for the next version
 
-选择一个工作流，按周记录：固定任务定义；付费需求；可用交付容量；授权与验收容量；实际交付与成功率；单价；模型、重试、人工复核、销售和集成成本；固定成本；客户留存；事故与争议；平台替代方案。拿到这些数据后，才适合估计瓶颈、比较不同架构、计算治理投入收益，并逐步扩展到产业层面的模型。
+Choose one workflow and record the following weekly: fixed task definitions; paying demand; available delivery capacity; authorization and acceptance capacity; actual delivery and success rates; unit prices; model, retry, human review, sales, and integration costs; fixed costs; customer retention; incidents and disputes; and platform alternatives. Only with these data is it appropriate to estimate bottlenecks, compare architectures, calculate returns on governance investment, and gradually extend the model to industry-level analysis.
