@@ -1,6 +1,6 @@
-# AI Economy Viewer Board
+# AI Bottlenecks and Value Capture
 
-A static, single-page explanation of the AI economy’s capital flows, value capture, and household exposure. The circular diagram follows capital from savings to infrastructure; the inner return path represents equity and wage risk. Five regional panels contain six jurisdiction cards, with the United States and Canada shown separately.
+A static, single-page explanation of bottleneck migration and value distribution in the AI economy. It presents the mechanism, an interactive demand/delivery/authorization model, conditions for value capture, and testable hypotheses. Pension and sovereign capital appear as a secondary, expandable case study.
 
 **This is a mechanism illustration, not a prediction or investment advice. Figures are dated snapshots.** Institutional investment is not automatically a hedge against job loss. Buyout eligibility does not establish AI replacement. Sovereign investment is distinct from personal pension ownership.
 
@@ -14,6 +14,7 @@ For local viewing, run `python3 -m http.server 8000` in this directory and open 
 
 - `index.html`: self-contained rendering, styling, and interactions.
 - `data/snapshot.json`: the supplied figures, dates, labels, and source metadata. Edit this file alone to update those figures.
+- `data/theory.json`: primary theory content and clearly labeled illustrative model assumptions, presets, and control limits. These are not market measurements.
 - `data/explainer.json`: qualitative stage explanations, regional interpretation, reading guide, and source-filter labels. It adds no new numerical claims.
 - `LICENSE.md`: content licensed under CC BY 4.0; code under MIT.
 - [Model paper](ai-bottleneck-theory-v01.md) and [regional research note](pension-capital-and-ai.md): background analysis.

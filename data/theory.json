@@ -1,0 +1,212 @@
+{
+  "title": "AI Bottlenecks and Value Capture",
+  "proposition": "As cognitive capabilities become easier to replicate, growth depends on complementary conditions that expand more slowly. Removing constraints creates value; control of customers, scarce resources, and contracts shapes who retains the returns.",
+  "status": "A testable mechanism framework",
+  "network_heading": "How bottlenecks move",
+  "network_intro": "There is no permanent hierarchy of chips, models, platforms, applications, and trust. The binding constraint depends on the workflow and the moment.",
+  "stages": [
+    {
+      "title": "Cognitive costs fall",
+      "body": "More tasks become feasible and more teams can enter."
+    },
+    {
+      "title": "A complement becomes scarce",
+      "body": "Demand, reliable delivery, or authorization limits what can be sold."
+    },
+    {
+      "title": "Control shapes returns",
+      "body": "Substitutes, contracts, and customer access determine bargaining power."
+    },
+    {
+      "title": "Investment changes the constraint",
+      "body": "Capacity expands, competitors enter, and a new bottleneck can emerge."
+    }
+  ],
+  "feedbacks": [
+    {
+      "title": "Concentration",
+      "body": "Profits finance investment, acquisitions, and customer lock-in, reinforcing control."
+    },
+    {
+      "title": "Diffusion",
+      "body": "High returns attract supply and substitutes; standards can lower switching costs."
+    }
+  ],
+  "feedback_note": "Neither concentration nor diffusion is predetermined. The question is which force dominates under specific conditions.",
+  "model_heading": "From capability to transactions to profit",
+  "model_intro": "Use one workflow with fixed quality, deadline, and accountability requirements. All capacities refer to equivalent accepted tasks per month.",
+  "formula_q": "Q = min(D, K, T)",
+  "formula_profit": "π = mQ − F",
+  "parameters": {
+    "D": {
+      "value": 1000,
+      "label": "Paying demand",
+      "step": 100,
+      "min": 0,
+      "max": 1500,
+      "source_name": "AI bottleneck model — illustrative assumptions",
+      "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+      "date": "2026-10-28"
+    },
+    "K": {
+      "value": 600,
+      "label": "Reliable delivery",
+      "step": 100,
+      "min": 0,
+      "max": 1500,
+      "source_name": "AI bottleneck model — illustrative assumptions",
+      "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+      "date": "2026-10-28"
+    },
+    "T": {
+      "value": 300,
+      "label": "Authorization & acceptance",
+      "step": 100,
+      "min": 0,
+      "max": 1500,
+      "source_name": "AI bottleneck model — illustrative assumptions",
+      "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+      "date": "2026-10-28"
+    },
+    "m": {
+      "value": 6,
+      "label": "Contribution margin ($/task)",
+      "step": 1,
+      "min": -5,
+      "max": 20,
+      "source_name": "AI bottleneck model — illustrative assumptions",
+      "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+      "date": "2026-10-28"
+    }
+  },
+  "price": {
+    "value": 20,
+    "label": "Price per accepted task ($)",
+    "source_name": "AI bottleneck model — illustrative assumptions",
+    "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+    "date": "2026-10-28"
+  },
+  "fixed": {
+    "value": 2000,
+    "label": "Fixed operating costs per month ($)",
+    "source_name": "AI bottleneck model — illustrative assumptions",
+    "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
+    "date": "2026-10-28"
+  },
+  "assumptions": "Illustrative parameters, not market estimates. Price and fixed costs stay constant. Increasing contribution margin represents lower variable cost. Expansion and governance project costs are excluded.",
+  "model_limit": "A short-run approximation with strictly complementary inputs. Actual transactions may be lower; substitution and queues require a richer model. This is not a production function for the whole economy.",
+  "presets": [
+    {
+      "label": "Baseline",
+      "values": {
+        "D": 1000,
+        "K": 600,
+        "T": 300,
+        "m": 6
+      }
+    },
+    {
+      "label": "More delivery only",
+      "values": {
+        "D": 1000,
+        "K": 1200,
+        "T": 300,
+        "m": 6
+      }
+    },
+    {
+      "label": "More authorization",
+      "values": {
+        "D": 1000,
+        "K": 600,
+        "T": 600,
+        "m": 6
+      }
+    },
+    {
+      "label": "Margin pressure",
+      "values": {
+        "D": 1000,
+        "K": 600,
+        "T": 600,
+        "m": 2
+      }
+    },
+    {
+      "label": "Weak demand",
+      "values": {
+        "D": 200,
+        "K": 1500,
+        "T": 1500,
+        "m": 6
+      }
+    }
+  ],
+  "output_labels": [
+    "Current constraint",
+    "Transaction capacity",
+    "Operating profit at capacity"
+  ],
+  "margin_warning": "Negative contribution margin: operating at capacity increases losses. A firm may choose to reduce or stop delivery.",
+  "capacity_note": "tasks / month",
+  "profit_note": "$ / month",
+  "capture_heading": "Creating value and keeping returns are different",
+  "capture_rows": [
+    {
+      "asset": "Customers & distribution",
+      "creates": "Connect a useful result to a budget and a real workflow",
+      "captures": "Customer ownership, renewals, channel terms, switching costs",
+      "erodes": "Platform bundling, price competition, easy migration"
+    },
+    {
+      "asset": "Compute, energy & data",
+      "creates": "Make reliable delivery possible at scale",
+      "captures": "Scarce capacity, usage rights, financing and supply contracts",
+      "erodes": "New supply, substitutes, capital costs, stale data"
+    },
+    {
+      "asset": "Authorization & accountability",
+      "creates": "Allow results to enter production with acceptable permissions and responsibility",
+      "captures": "Enforceable integration, cross-organization adoption, willingness to pay",
+      "erodes": "Native platform features, open standards, weak independent demand"
+    }
+  ],
+  "capture_columns": [
+    "Complement",
+    "Value created",
+    "Conditions for capture",
+    "What can erode returns"
+  ],
+  "tests_heading": "What would support or weaken the model",
+  "tests": [
+    {
+      "title": "Agent trust",
+      "hypothesis": "Authorization and acceptance limit a specific cross-organization workflow.",
+      "test": "Reduce the friction while holding task quality and demand comparable. Measure paid accepted tasks, review time, and net benefits.",
+      "weakens": "Approvals get faster but transactions do not grow, or customers will not renew against platform alternatives."
+    },
+    {
+      "title": "Startup viability",
+      "hypothesis": "Lower entry costs can increase experimentation faster than sustainable businesses.",
+      "test": "Track a consistent cohort and distinguish customer value, independent viability, investor returns, and social spillovers.",
+      "weakens": "Do not assume fixed winner slots or use failure percentages without a denominator, observation window, and exit definitions."
+    },
+    {
+      "title": "Value distribution",
+      "hypothesis": "Lower delivery costs need not increase application profits.",
+      "test": "Follow prices, upstream fees, human review, retention, and operating margins within the same businesses.",
+      "weakens": "If returns expand broadly and control of complementary assets fails to explain differences, the distribution argument needs revision."
+    }
+  ],
+  "case_heading": "Case study: pension and sovereign capital",
+  "case_intro": "One application of the distribution question: who owns claims on AI-related cash flows, and how do those returns reach households? This is a case within the model, not its central mechanism.",
+  "case_summary": "Explore the capital-flow case study",
+  "paper_label": "Read the full model",
+  "nav": [
+    "Mechanism",
+    "Model",
+    "Value capture",
+    "Evidence",
+    "Capital case"
+  ]
+}
