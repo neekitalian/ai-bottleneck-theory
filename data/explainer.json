@@ -1,6 +1,6 @@
 {
-  "flow_heading": "What happens at each stage",
-  "flow_intro": "Select a stage in the loop to see its cash flows, control points, and exposure.",
+  "flow_heading": "Capital flows and risk",
+  "flow_intro": "Choose a stage to see who pays, who receives returns, and who carries risk.",
   "flow_labels": [
     "Capital received",
     "Capital paid out",
@@ -71,10 +71,10 @@
   ],
   "region_notes": {
     "US": "An intermediary route: pension institutions select private-market managers. Net beneficiary returns depend on underlying holdings, fees, investment terms, and benefit rules. Private VC exposure does not capture listed AI holdings.",
-    "Canada": "Ownership and lending create different claims. A data-center stake offers residual ownership returns; a loan offers contractual interest and repayment rights. Neither is equivalent to owning a model company.",
+    "Canada": "A data-center stake gives the investor an ownership claim. A loan gives it interest and repayment rights. Both differ from owning shares in a model company.",
     "UK": "The private-markets target is broader than the current unlisted-equity measure. Keep policy pledges, binding commitments, capital calls, and invested assets separate when assessing progress.",
     "EU": "The comparison mixes a pension-and-insurance asset stock with venture commitments over a decade. It is not a current AI portfolio weight, and low domestic VC commitments do not establish an absence of global AI exposure.",
-    "Japan": "The alternatives share and allocation cap describe capacity, not promised AI spending. A direct commitment to a private-equity fund is also different from directly owning its portfolio companies.",
+    "Japan": "The alternatives cap is an allocation limit, not a promise to invest in AI. Investing directly in a private-equity fund also differs from directly owning its portfolio companies.",
     "Singapore": "Sovereign investors can hold claims across the AI stack. Sovereign assets are distinct from personal pension accounts; how returns reach households depends on institutional and fiscal arrangements."
   },
   "mechanism_heading": "What turns a bottleneck into returns",
@@ -121,5 +121,6 @@
   ],
   "source_empty": "No sources match this filter.",
   "stage_label": "Stage",
-  "back_label": "Back to loop"
+  "back_label": "Back to loop",
+  "case_claim": "Pension investments and household risk"
 }

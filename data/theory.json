@@ -1,40 +1,39 @@
 {
   "title": "AI Bottlenecks and Value Capture",
-  "proposition": "As cognitive capabilities become easier to replicate, growth depends on complementary conditions that expand more slowly. Removing constraints creates value; control of customers, scarce resources, and contracts shapes who retains the returns.",
-  "status": "A testable mechanism framework",
-  "network_heading": "How bottlenecks move",
-  "network_intro": "There is no permanent hierarchy of chips, models, platforms, applications, and trust. The binding constraint depends on the workflow and the moment.",
+  "proposition": "When cognition gets cheaper, growth can be limited by demand, delivery, or authorization. Easing a constraint creates value; competition and contracts determine who keeps it.",
+  "network_heading": "Bottleneck migration",
+  "network_intro": "The bottleneck is whichever constraint prevents a workflow from producing more accepted results. It can differ across businesses and change over time.",
   "stages": [
     {
-      "title": "Cognitive costs fall",
-      "body": "More tasks become feasible and more teams can enter."
+      "title": "Cheaper cognitive tasks",
+      "body": "More tasks become affordable and more firms can enter."
     },
     {
-      "title": "A complement becomes scarce",
-      "body": "Demand, reliable delivery, or authorization limits what can be sold."
+      "title": "Other constraints bind",
+      "body": "Demand, delivery capacity, or authorization limits sales."
     },
     {
-      "title": "Control shapes returns",
-      "body": "Substitutes, contracts, and customer access determine bargaining power."
+      "title": "Bargaining power shifts",
+      "body": "Control of the scarce input may give its owner better terms."
     },
     {
-      "title": "Investment changes the constraint",
-      "body": "Capacity expands, competitors enter, and a new bottleneck can emerge."
+      "title": "Supply responds",
+      "body": "Investment and substitutes can ease the constraint and move it elsewhere."
     }
   ],
   "feedbacks": [
     {
       "title": "Concentration",
-      "body": "Profits finance investment, acquisitions, and customer lock-in, reinforcing control."
+      "body": "Profits can fund acquisitions, capacity expansion, and customer lock-in, strengthening the incumbent’s position."
     },
     {
       "title": "Diffusion",
-      "body": "High returns attract supply and substitutes; standards can lower switching costs."
+      "body": "High returns attract competitors and substitutes. Common standards can make switching easier."
     }
   ],
-  "feedback_note": "Neither concentration nor diffusion is predetermined. The question is which force dominates under specific conditions.",
-  "model_heading": "From capability to transactions to profit",
-  "model_intro": "Use one workflow with fixed quality, deadline, and accountability requirements. All capacities refer to equivalent accepted tasks per month.",
+  "feedback_note": "Supply growth can reduce concentration. Customer lock-in and hard-to-replace assets can sustain it.",
+  "model_heading": "Volume and profit",
+  "model_intro": "Choose a task with fixed quality, deadline, and responsibility requirements. Measure demand and both capacities in accepted tasks per month.",
   "formula_q": "Q = min(D, K, T)",
   "formula_profit": "π = mQ − F",
   "parameters": {
@@ -93,8 +92,8 @@
     "source_url": "https://github.com/neekitalian/ai-bottleneck-theory/blob/main/ai-bottleneck-theory-v01.md",
     "date": "2026-10-28"
   },
-  "assumptions": "Illustrative parameters, not market estimates. Price and fixed costs stay constant. Increasing contribution margin represents lower variable cost. Expansion and governance project costs are excluded.",
-  "model_limit": "A short-run approximation with strictly complementary inputs. Actual transactions may be lower; substitution and queues require a richer model. This is not a production function for the whole economy.",
+  "assumptions": "All inputs are illustrative. Price and fixed costs are held constant. Changing the contribution margin changes variable cost. Expansion and governance costs are not included.",
+  "model_limit": "The model assumes each input is necessary and cannot be substituted. Actual sales may be lower than capacity. It does not describe the whole economy.",
   "presets": [
     {
       "label": "Baseline",
@@ -147,66 +146,66 @@
     "Transaction capacity",
     "Operating profit at capacity"
   ],
-  "margin_warning": "Negative contribution margin: operating at capacity increases losses. A firm may choose to reduce or stop delivery.",
+  "margin_warning": "At a negative contribution margin, each additional task increases the loss. Reducing or stopping delivery may be preferable.",
   "capacity_note": "tasks / month",
   "profit_note": "$ / month",
-  "capture_heading": "Creating value and keeping returns are different",
+  "capture_heading": "Who keeps the returns",
   "capture_rows": [
     {
       "asset": "Customers & distribution",
-      "creates": "Connect a useful result to a budget and a real workflow",
-      "captures": "Customer ownership, renewals, channel terms, switching costs",
-      "erodes": "Platform bundling, price competition, easy migration"
+      "creates": "Reach customers with a useful result they will pay for",
+      "captures": "Customer relationships, renewals, channel terms, switching costs",
+      "erodes": "Platform bundling, price competition, easier switching"
     },
     {
       "asset": "Compute, energy & data",
-      "creates": "Make reliable delivery possible at scale",
-      "captures": "Scarce capacity, usage rights, financing and supply contracts",
-      "erodes": "New supply, substitutes, capital costs, stale data"
+      "creates": "Provide the resources needed for reliable delivery",
+      "captures": "Scarce capacity, data rights, financing and supply contracts",
+      "erodes": "New capacity, substitutes, capital costs, outdated data"
     },
     {
       "asset": "Authorization & accountability",
-      "creates": "Allow results to enter production with acceptable permissions and responsibility",
-      "captures": "Enforceable integration, cross-organization adoption, willingness to pay",
-      "erodes": "Native platform features, open standards, weak independent demand"
+      "creates": "Put results into use with enforceable permissions and clear responsibility",
+      "captures": "Integration across organizations and customers willing to pay for it",
+      "erodes": "Built-in platform features, open standards, insufficient paid demand"
     }
   ],
   "capture_columns": [
-    "Complement",
+    "Resource or relationship",
     "Value created",
-    "Conditions for capture",
-    "What can erode returns"
+    "How returns are retained",
+    "What reduces returns"
   ],
-  "tests_heading": "What would support or weaken the model",
+  "tests_heading": "How to test the model",
   "tests": [
     {
       "title": "Agent trust",
-      "hypothesis": "Authorization and acceptance limit a specific cross-organization workflow.",
-      "test": "Reduce the friction while holding task quality and demand comparable. Measure paid accepted tasks, review time, and net benefits.",
-      "weakens": "Approvals get faster but transactions do not grow, or customers will not renew against platform alternatives."
+      "hypothesis": "Authorization or acceptance may limit a cross-organization workflow.",
+      "test": "Shorten approvals without changing task quality or customer budgets. Track paid, accepted tasks, review time, and net savings.",
+      "weakens": "If sales do not rise, or customers choose bundled platform tools over a paid service, authorization may not be the binding constraint or a viable standalone business."
     },
     {
       "title": "Startup viability",
-      "hypothesis": "Lower entry costs can increase experimentation faster than sustainable businesses.",
-      "test": "Track a consistent cohort and distinguish customer value, independent viability, investor returns, and social spillovers.",
-      "weakens": "Do not assume fixed winner slots or use failure percentages without a denominator, observation window, and exit definitions."
+      "hypothesis": "New firms may enter faster than sustainable businesses emerge.",
+      "test": "Follow firms founded in the same period and market. Track repeat customers, operating viability, shareholder returns, and spillovers separately.",
+      "weakens": "Success rates need a defined cohort, observation period, and outcome. The model does not assume a fixed number of winners."
     },
     {
       "title": "Value distribution",
-      "hypothesis": "Lower delivery costs need not increase application profits.",
-      "test": "Follow prices, upstream fees, human review, retention, and operating margins within the same businesses.",
-      "weakens": "If returns expand broadly and control of complementary assets fails to explain differences, the distribution argument needs revision."
+      "hypothesis": "Cheaper delivery does not guarantee higher application profits.",
+      "test": "Track delivery costs, prices, upstream fees, human review, retention, and margins within the same firms.",
+      "weakens": "Broad, sustained profit growth unrelated to control of customers or scarce inputs would weaken this explanation of value distribution."
     }
   ],
-  "case_heading": "Case study: pension and sovereign capital",
-  "case_intro": "One application of the distribution question: who owns claims on AI-related cash flows, and how do those returns reach households? This is a case within the model, not its central mechanism.",
-  "case_summary": "Explore the capital-flow case study",
-  "paper_label": "Read the full model",
+  "case_heading": "Pensions and sovereign funds",
+  "case_intro": "Pension and sovereign investments show how ownership affects the distribution of AI returns. The case compares investment routes and household exposure.",
+  "case_summary": "View the pension case",
+  "paper_label": "Read the full paper",
   "nav": [
-    "Mechanism",
+    "Bottlenecks",
     "Model",
-    "Value capture",
-    "Evidence",
-    "Capital case"
+    "Returns",
+    "Tests",
+    "Pension case"
   ]
 }
