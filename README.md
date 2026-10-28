@@ -1,81 +1,35 @@
-# Bottleneck Migration and Value Capture in the AI Revolution
+# AI Economy Viewer Board
 
-> As cognitive capabilities become easier to replicate, economic growth becomes increasingly constrained by conditions that expand more slowly. Those who remove these constraints create value; those who control customers, critical resources, and transaction terms may be able to retain the returns over time.
+A static, single-page explanation of the AI economy’s capital flows, value capture, and household exposure. The circular diagram follows capital from savings to infrastructure; the inner return path represents equity and wage risk. Five regional panels contain six jurisdiction cards, with the United States and Canada shown separately.
 
-This project presents a testable mechanism framework and an illustrative model. It has not yet been validated with data and is not an industry forecast or a prediction of startup success rates.
+**This is a mechanism illustration, not a prediction or investment advice. Figures are dated snapshots.** Institutional investment is not automatically a hedge against job loss. Buyout eligibility does not establish AI replacement. Sovereign investment is distinct from personal pension ownership.
 
-For the complete model, assumptions, evidence audit, startup outcome definitions, and conditional scenarios for 2027–2028, see the **[full paper](ai-bottleneck-theory-v01.md)**.
+## Open the board
 
-## Bottlenecks form a changing network of power
+The site uses HTML, inline CSS, SVG, and vanilla JavaScript. There are no packages, frameworks, build steps, or external fonts. Enable GitHub Pages in repository **Settings → Pages → Deploy from a branch**, selecting **main** and **/ (root)**.
 
-Chips, models, platforms, applications, and trust infrastructure have no permanently fixed hierarchy. The key question is: in a particular business at a particular time, what missing condition prevents other inputs from producing more results?
+For local viewing, run `python3 -m http.server 8000` in this directory and open `http://localhost:8000`. Opening the HTML directly with a file URL does not reliably allow the browser to fetch the JSON.
 
-```mermaid
-flowchart TD
-    A[Lower cost of cognitive tasks] --> B[More tasks become feasible and more teams enter]
-    B --> C[Paying demand, reliable delivery, and authorization and acceptance constrain growth]
-    C --> D[Controllers of current bottlenecks may gain bargaining power]
-    D --> E[Profit and capital accumulation]
-    E --> F[Investment, acquisitions, and customer lock-in]
-    F -->|Reinforce concentration| D
-    E --> G[New supply, substitutes, and standardization]
-    G -->|Weaken existing bottlenecks and shift constraints| C
-```
+## Files
 
-- **Concentration:** Profitable incumbents can invest, acquire competitors, and control distribution.
-- **Diffusion:** High profits attract substitutes and new supply; standardization lowers entry and switching costs.
+- `index.html`: self-contained rendering, styling, and interactions.
+- `data/snapshot.json`: all displayed content, figures, dates, labels, and source metadata. Edit this file alone to update the board.
+- `LICENSE.md`: content licensed under CC BY 4.0; code under MIT.
+- [Model paper](ai-bottleneck-theory-v01.md) and [regional research note](pension-capital-and-ai.md): background analysis.
 
-Neither inevitable concentration nor inevitable democratization should be assumed. The research question is: under what conditions does one force dominate?
+## Evidence policy
 
-## A minimal operational model
+Snapshot values reproduce the supplied brief exactly; the renderer does not round, recalculate, or substitute values. Each metric has `value`, `label`, `source_name`, `source_url`, and `date`. A null source URL means the exact link was not supplied; the board explicitly labels it pending. A supplied link is not a claim of independent verification. The source list is generated from the same metric objects as the board.
 
-Choose a task with consistent quality, deadline, and accountability requirements. Measure all capacities in completed tasks per month:
+The requested Q3 badge is retained, but the snapshot also contains October developments. The page discloses this mismatch; each figure’s date takes precedence. Regional circuit lines are qualitative illustrations, not quantitative resistance scores. The headline is a mechanism framing, not a proven causal statement about every household.
 
-$$
-Q^{\max}=\min\{D(p),K,T\}
-$$
+## Quarterly updates
 
-| Variable | Meaning |
-| --- | --- |
-| D(p) | Reachable demand willing to pay at the current price |
-| K | Reliable delivery capacity supported by technology and resources |
-| T | Organizational capacity to authorize, supervise, accept results, and accept responsibility arrangements |
-| Q max | Maximum transaction volume; actual volume may be lower |
+1. Review each metric against its original source. Preserve the current snapshot in Git history before changing it.
+2. Edit `data/snapshot.json` only. Enter the exact published value as a string, its scope in `label`, publisher in `source_name`, a precise HTTPS link in `source_url`, and the relevant reporting period in `date`. Do not silently turn commitments into deployed capital or targets into current allocations.
+3. Resolve pending citations when exact sources become available. Keep unknown dates explicitly unknown. Match categories and denominators before drawing comparisons.
+4. Update `badge`, `timing_note`, and explanatory text to match the reporting period. Keep forecasts, targets, and realized figures distinguishable.
+5. Serve locally. Check the diagram, all regional cards, keyboard tooltips, source links, and mobile stack. Check the browser console and confirm the JSON request succeeds.
+6. Commit and push. GitHub Pages republishes from the configured branch without a build step.
 
-In the simplified case of operating at this limit:
-
-$$
-\pi=(p-c)Q^{\max}-F=mQ^{\max}-F
-$$
-
-Here, p is the price per completed task; c includes variable costs such as model calls, retries, and human review; F is fixed cost; and m is contribution margin per task.
-
-**Capability growth → transaction volume growth → profit growth: every step requires additional conditions.** More agent calls do not necessarily mean larger end-customer budgets.
-
-This minimum model is a short-run approximation with strictly complementary inputs. It should not be treated as a production function for the entire economy.
-
-## Illustrative scenarios
-
-All numbers are illustrative parameters, not industry forecasts. The price is fixed at $20 per task and fixed costs at $2,000 per month.
-
-| Scenario | D | K | T | m ($/task) | Q max (tasks/month) | Profit ($/month) |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Baseline | 1,000 | 600 | 300 | 6 | 300 | -200 |
-| Increase delivery capacity only | 1,000 | 1,200 | 300 | 6 | 300 | -200 |
-| Increase authorization and acceptance capacity from baseline | 1,000 | 600 | 600 | 6 | 600 | 1,600 |
-| Lower contribution margin | 1,000 | 600 | 600 | 2 | 600 | -800 |
-| Demand becomes the bottleneck | 200 | 1,500 | 1,500 | 6 | 200 | -800 |
-
-Capacity improvements also require investment. These scenarios exclude the incremental costs of capacity expansion or governance projects.
-
-## Priority questions to test
-
-1. Does removing authorization constraints increase actual transactions?
-2. When delivery costs fall, who captures the gains: application companies, customers, upstream suppliers, or distributors?
-3. When platforms offer similar features, do customers continue renewing independent solutions?
-
-The central research question is which conditions remain scarce as cognitive capabilities expand, and through what mechanisms that scarcity becomes returns and power.
-
-## Pension capital and ownership of AI returns
-
-The [regional research note](pension-capital-and-ai.md) extends the model to pension and sovereign capital across six jurisdictions in five regional panels. It compares investment routes, separates policy commitments from deployed assets, and asks how institutional ownership transmits AI returns to households. Checked figures, attributed reporting, and pending claims are identified separately.
+The page uses text insertion rather than HTML insertion for snapshot content. Source URLs should be reviewed as HTTPS URLs. All numeric content is held in JSON; layout coordinates and visual styling constants remain in the page.

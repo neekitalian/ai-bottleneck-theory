@@ -1,0 +1,341 @@
+{
+  "title": "Who owns the AI economy?",
+  "eyebrow": "CAPITAL • CONTROL • CONSEQUENCE",
+  "intro": "Follow the money forward. Follow the risk home.",
+  "center": "Your pension funds the system that’s repricing your job.",
+  "center_note": "A mechanism to examine, not a universal causal claim.",
+  "capital_label": "Capital flows clockwise",
+  "risk_label": "Risk returns to households",
+  "risk_detail": "Equity risk via pensions · job risk via wages",
+  "loop_heading": "The loop",
+  "regions_heading": "Five circuits. Six jurisdictions.",
+  "regions_note": "North America contains two different routes. Circuit shapes are qualitative, not measured resistance scores.",
+  "badge": "Q3 2026 snapshot · updated quarterly",
+  "disclaimer": "Mechanism illustration, not investment advice. Figures are dated snapshots.",
+  "timing_note": "The supplied snapshot includes October 2026 developments after Q3. Dates on each figure take precedence over the badge.",
+  "evidence_note": "Values are reproduced as supplied, not independently endorsed. Missing source URLs are marked pending. Private-market exposure is not total AI exposure; sovereign assets are not personal pension accounts; buyout eligibility does not prove AI replacement.",
+  "nodes": [
+    {
+      "title": "Household savings",
+      "subtitle": "Workers’ retirement savings",
+      "metrics": []
+    },
+    {
+      "title": "Public pensions",
+      "subtitle": "Retirement capital enters private markets",
+      "metrics": [
+        {
+          "value": "86%",
+          "label": "of US public pensions invest in PE",
+          "source_name": "Nasdaq eVestment",
+          "source_url": null,
+          "date": "2026"
+        },
+        {
+          "value": "$100.9B",
+          "label": "committed in 2025",
+          "source_name": "Nasdaq eVestment",
+          "source_url": null,
+          "date": "2026"
+        },
+        {
+          "value": "+24%",
+          "label": "YoY",
+          "source_name": "Nasdaq eVestment",
+          "source_url": null,
+          "date": "2026"
+        }
+      ]
+    },
+    {
+      "title": "VC / PE funds",
+      "subtitle": "Capital concentrates around AI",
+      "metrics": [
+        {
+          "value": "71%",
+          "label": "of global VC went to AI in 9M 2026",
+          "source_name": "CB Insights",
+          "source_url": null,
+          "date": "9M 2026"
+        },
+        {
+          "value": "$495.6B",
+          "label": "AI venture funding",
+          "source_name": "CB Insights",
+          "source_url": null,
+          "date": "9M 2026"
+        },
+        {
+          "value": "86%",
+          "label": "of US VC went to AI",
+          "source_name": "Dealroom",
+          "source_url": null,
+          "date": "2026"
+        }
+      ]
+    },
+    {
+      "title": "AI companies",
+      "subtitle": "Q1 2026 funding",
+      "metrics": [
+        {
+          "value": "$122B",
+          "label": "OpenAI",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Q1 2026"
+        },
+        {
+          "value": "$30B",
+          "label": "Anthropic",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Q1 2026"
+        },
+        {
+          "value": "$20B",
+          "label": "xAI",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Q1 2026"
+        }
+      ]
+    },
+    {
+      "title": "Compute & energy",
+      "subtitle": "Infrastructure absorbs capital",
+      "metrics": [
+        {
+          "value": "~$725B",
+          "label": "hyperscaler capex 2026",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "2026"
+        },
+        {
+          "value": "75%",
+          "label": "NVIDIA gross margin",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Date not supplied"
+        }
+      ]
+    },
+    {
+      "title": "Jobs repriced",
+      "subtitle": "Microsoft opened voluntary buyouts",
+      "metrics": [
+        {
+          "value": "~60,000",
+          "label": "employees eligible",
+          "source_name": "Microsoft / supplied brief",
+          "source_url": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
+          "date": "Oct 2026"
+        },
+        {
+          "value": "~27%",
+          "label": "of workforce",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Oct 2026"
+        }
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "name": "US",
+      "stance": "Deep pipeline",
+      "route": "Intermediated",
+      "metrics": [
+        {
+          "value": "$100.9B",
+          "label": "PE commitments in 2025 (+24%)",
+          "source_name": "Nasdaq eVestment",
+          "source_url": null,
+          "date": "2026"
+        },
+        {
+          "value": "1–3%",
+          "label": "VC share of pension portfolios",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "Date not supplied"
+        }
+      ],
+      "details": [],
+      "note": ""
+    },
+    {
+      "name": "Canada",
+      "stance": "Direct owner",
+      "route": "Direct ownership",
+      "metrics": [
+        {
+          "value": ">$3.6B",
+          "label": "CPP AI data-center investment",
+          "source_name": "Supplied research; CPP link provided",
+          "source_url": "https://www.cppinvestments.com/newsroom/cpp-investments-partners-with-eqt-to-support-global-digital-infrastructure-growth/",
+          "date": "2026"
+        },
+        {
+          "value": "51%",
+          "label": "atNorth stake (~$1.3B)",
+          "source_name": "Supplied research — transaction unverified",
+          "source_url": null,
+          "date": "2026"
+        }
+      ],
+      "details": [
+        {
+          "value": "$1.75B",
+          "label": "EQT / EdgeConneX",
+          "source_name": "CPP Investments — supplied research",
+          "source_url": "https://www.cppinvestments.com/newsroom/cpp-investments-partners-with-eqt-to-support-global-digital-infrastructure-growth/",
+          "date": "2026"
+        },
+        {
+          "value": "$300M",
+          "label": "xAI debt",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "2026"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "UK",
+      "stance": "Ambition vs reality",
+      "route": "Commitment gap",
+      "metrics": [
+        {
+          "value": "10%",
+          "label": "Mansion House private-markets target by 2030",
+          "source_name": "UK Private Capital",
+          "source_url": "https://www.ukprivatecapital.co.uk/resource/vc-funds-still-waiting-for-mansion-house-commitments-to-materialise.html",
+          "date": "2030 target"
+        },
+        {
+          "value": "0.6%",
+          "label": "actual unlisted equity in DC default funds",
+          "source_name": "Supplied research — figure pending verification",
+          "source_url": "https://www.ukprivatecapital.co.uk/resource/vc-funds-still-waiting-for-mansion-house-commitments-to-materialise.html",
+          "date": "2026"
+        }
+      ],
+      "details": [
+        {
+          "value": "16.5×",
+          "label": "foreign versus domestic capital into UK private markets",
+          "source_name": "Source pending — supplied brief",
+          "source_url": null,
+          "date": "2025"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "EU",
+      "stance": "Disconnected giant",
+      "route": "Allocation friction",
+      "metrics": [
+        {
+          "value": "~$15T",
+          "label": "pension + insurance pool",
+          "source_name": "Dealroom",
+          "source_url": "https://dealroom.co/news/165335-eu-drops-plan-to-force-pension-funds-to-put-2-into-venture-capital/",
+          "date": "2026"
+        },
+        {
+          "value": "~0.10%",
+          "label": "reached VC over 10 years",
+          "source_name": "Dealroom",
+          "source_url": "https://dealroom.co/news/165335-eu-drops-plan-to-force-pension-funds-to-put-2-into-venture-capital/",
+          "date": "2016–2025"
+        }
+      ],
+      "details": [
+        {
+          "value": "$15.8B",
+          "label": "EU27 AI VC",
+          "source_name": "Supplied research / Alice Labs",
+          "source_url": "https://alicelabs.ai/reports/eu-ai-investment-startup-landscape-2026",
+          "date": "2026"
+        },
+        {
+          "value": "6%",
+          "label": "of global AI VC",
+          "source_name": "Supplied research / Alice Labs",
+          "source_url": "https://alicelabs.ai/reports/eu-ai-investment-startup-landscape-2026",
+          "date": "2026"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "Japan",
+      "stance": "Waking giant",
+      "route": "Mandate gate",
+      "metrics": [
+        {
+          "value": "1.74%",
+          "label": "GPIF alternatives allocation",
+          "source_name": "GPIF annual report",
+          "source_url": "https://www.gpif.go.jp/en/topics/annual_report_fiscal_year_2025.pdf",
+          "date": "FY2025"
+        },
+        {
+          "value": "5%",
+          "label": "alternatives cap",
+          "source_name": "Supplied research — cap pending confirmation",
+          "source_url": "https://www.gpif.go.jp/en/topics/annual_report_fiscal_year_2025.pdf",
+          "date": "2026"
+        }
+      ],
+      "details": [
+        {
+          "value": "¥20B",
+          "label": "first-ever direct PE fund investment",
+          "source_name": "The Japan Times — supplied research",
+          "source_url": "https://www.japantimes.co.jp/business/2026/07/21/gpif-direct-private-equity-investment/",
+          "date": "Jul 2026"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "Singapore",
+      "stance": "Full-stack sovereign",
+      "route": "Sovereign route",
+      "metrics": [
+        {
+          "value": "6%",
+          "label": "Temasek AI share of portfolio",
+          "source_name": "Reuters — supplied research",
+          "source_url": "https://www.reuters.com/world/asia-pacific/temasek-targets-big-jump-ai-investments-value-portfolio-hits-record-high-2026-07-08/",
+          "date": "2026"
+        },
+        {
+          "value": "10–15%",
+          "label": "target AI allocation by 2031",
+          "source_name": "Reuters — supplied research",
+          "source_url": "https://www.reuters.com/world/asia-pacific/temasek-targets-big-jump-ai-investments-value-portfolio-hits-record-high-2026-07-08/",
+          "date": "2031 target"
+        }
+      ],
+      "details": [
+        {
+          "value": "$65B",
+          "label": "Anthropic round co-led by GIC",
+          "source_name": "TNGlobal",
+          "source_url": "https://technode.global/2026/05/29/gic-temasek-anchor-singapores-investment-in-anthropics-65b-series-h-round/",
+          "date": "May 2026"
+        }
+      ],
+      "note": "GIC–Anthropic–Macquarie data-center JV (supplied research; source pending)"
+    }
+  ],
+  "capture_note": "Value capture: fund fees, company equity, and infrastructure margins.",
+  "cost_note": "Costs: investment losses, energy demand, and pressure on wages."
+}

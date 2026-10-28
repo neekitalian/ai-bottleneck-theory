@@ -1,3 +1,13 @@
+# Licensing
+
+## Content: CC BY 4.0
+
+Original editorial text, model documents, diagram content, and the snapshot compilation are licensed under the [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/). Attribute this repository and identify modifications. Third-party data and linked publications remain subject to their owners’ rights; this license does not relicense those sources.
+
+## Code: MIT
+
+The HTML, CSS, SVG rendering code, and JavaScript are licensed under the MIT license below. This split supersedes the previous blanket MIT treatment for original editorial content in this revision; prior revisions remain available under their original terms.
+
 MIT License
 
 Copyright (c) 2026 neekita
